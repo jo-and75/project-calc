@@ -1,11 +1,11 @@
-const body = document.getElementsByTagName("body");
+const page = document.getElementById("page");
 const calculatorBase = document.createElement("div")  
-calculatorBase.classList.add("calcBase");
+calculatorBase.classList.add("calc-base");
+calculatorBase.setAttribute("style", "border: solid black;")
 
 
 
 
 
 
-
-body.appendChild(calculatorBase);
+page.appendChild(calculatorBase);
