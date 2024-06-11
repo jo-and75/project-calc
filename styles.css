@@ -29,7 +29,7 @@ body{
     justify-content: space-evenly;  
     align-self: center;
     border: solid red;
-    width: 270px; 
+    width: 278px; 
     height: 70px;
  }  
 
@@ -38,31 +38,29 @@ body{
     flex-direction: row;   
     align-self: center;
     justify-content: space-evenly; 
-    
+
     border: solid green; 
-    width: 270px; 
+    width: 280px; 
     height: 70px;
 } 
 
 .third-row{ 
     display: flex; 
     flex-direction: row;  
-    justify-content: center;  
+    justify-content: space-evenly;  
     align-self: center;
-    gap: 3px;
     border: solid blue;  
-    width: 270px; 
+    width: 280px; 
     height: 70px;
 }
 
 .fourth-row{ 
     display: flex; 
     flex-direction: row;  
-    justify-content: center;  
+    justify-content: space-evenly;  
     align-self: center;
-    gap: 3px;
     border: solid yellow;  
-    width: 270px; 
+    width: 280px; 
     height: 70px;
 } 
 
@@ -72,7 +70,7 @@ body{
     justify-content: space-evenly;  
     align-self: center;
     border: solid orange; 
-    width: 270px; 
+    width: 280px; 
     height: 70px;
 } 
 
@@ -91,7 +89,7 @@ body{
     align-items: center; 
     padding-right: 65px;
     height: 55px;  
-    width: 133px; 
+    width: 125px; 
     border-radius: 28px; 
     border: black; 
     
@@ -148,16 +146,24 @@ button{
     font-size: 25px; 
     background-color:#db8c1c; 
     color: aliceblue; 
-    font-weight: bold;
+    font-weight: bold; 
+    text-align: center;
 } 
 
 
-.input{  
+.input {
+    display: flex;  
+    flex-direction: column;
+    box-sizing: border-box;
     height: 200px;
-    font-size: 40px; 
-    text-align: right; 
+    font-size: 65px;   
+    text-align: right;
     color: #D4D4D2; 
-    background-color: black;
+    background-color: black; 
+    font-weight: 300;
+    padding-top: 120px;  /* Adjust padding to move text to the bottom */
+    padding-right: 10px; /* Adjust padding to move text to the right */
+    line-height: 1; /* Ensures single line height */
 }
 
 .calc-base{  
