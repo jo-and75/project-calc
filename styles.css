@@ -1,9 +1,72 @@
-html{ 
-    height: 100vh; 
+body{ 
+    height: 100vh;  
+    width: 100vw;
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: solid green;
+}  
+
+#container{  
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border: solid pink; 
+    height: 450px; 
+    width: 300px;
 }
+
+.first-row{ 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 3px;
+    border: solid red;
+    width: 270px; 
+    height: 70px;
+ }  
+
+.second-row{ 
+    display: flex; 
+    flex-direction: row;  
+    justify-content: space-between;
+    border: solid green; 
+    width: 270px; 
+    height: 70px;
+} 
+
+.third-row{ 
+    display: flex; 
+    flex-direction: row;  
+    justify-content: center; 
+    gap: 3px;
+    border: solid blue;  
+    width: 270px; 
+    height: 70px;
+}
+
+.fourth-row{ 
+    display: flex; 
+    flex-direction: row;  
+    justify-content: center; 
+    gap: 3px;
+    border: solid yellow;  
+    width: 270px; 
+    height: 70px;
+} 
+
+.fifth-row{ 
+    display: flex; 
+    flex-direction: row;  
+    justify-content: center; 
+    gap: 3px;
+    border: solid orange; 
+    width: 270px; 
+    height: 70px;
+} 
 
 *,
 *::before, 
@@ -12,11 +75,32 @@ html{
     flex-direction: column; 
     padding: 0; 
     margin: 0; 
-} 
+}  
+
+.btn{ 
+    display: flex; 
+    justify-content: center; 
+    height: 60px; 
+    width: 133px;
+}
+
+button{  
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 60px;
+    width: 65px; 
+}
+.input{  
+    height: 100px;
+    font-size: 40px; 
+    text-align: right;
+}
 
 .calc-base{  
     display: flex; 
     border: solid black; 
-    width: 350px;
-    min-height: 450px;
-}
+    width: 270px;
+    height: 420px;
+} 
+
