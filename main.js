@@ -112,7 +112,6 @@ fifthRow.appendChild(num0);
 fifthRow.appendChild(pointBtn);
 fifthRow.appendChild(equalsBtn); 
 
-const operators = document.querySelectorAll(".operators");
 
 let currentNumber = "";
 let operator = null;
@@ -123,11 +122,24 @@ function updateDisplay(content) {
 }
 
 let calculationCompleted = false;
-let operatorClicked = false;
+let operatorClicked = false; 
+let activateOperatorTransition = false;
+
+
+
+// Function to reset styles for all buttons
+function resetButtonStyles() {
+    document.querySelectorAll(".operators").forEach(button => {
+        button.style.backgroundColor = ""; // Reset background color
+        button.style.color = ""; // Reset text color
+    });
+}
+
 
 // Event listener for numbers
 document.querySelectorAll(".normal-button").forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", () => { 
+       resetButtonStyles();
         // Resets variable for new calculation 
         if (calculationCompleted && !operatorClicked) {
             intermediateResults = null;
@@ -138,17 +150,18 @@ document.querySelectorAll(".normal-button").forEach(button => {
         }
         currentNumber += button.textContent;
         updateDisplay(currentNumber);
-    })
+    }) 
 })
+
 
 // Event listener for operators
 document.querySelectorAll(".operators").forEach((button) => { 
-    button.addEventListener("click", () => { 
-
+    button.addEventListener("click", () => {  
+        activateOperatorTransition = true; 
+        if(activateOperatorTransition){ 
             button.style.backgroundColor = "white"; // Set background color
             button.style.color = "#db8c1c";
-             
-
+        }
         if (currentNumber !== "") {
             if (intermediateResults == null) {
                 intermediateResults = Number(currentNumber)
@@ -163,16 +176,15 @@ document.querySelectorAll(".operators").forEach((button) => {
         updateDisplay(intermediateResults); // This shows result after each operator is pressed. 
        
     });  
-    button.addEventListener("blur", () => {
-        button.classList.remove("active");
-    });
+ 
 });
 
 
 
 
 // Event listener for the percentage button
-remainderBtn.addEventListener("click", () => {
+remainderBtn.addEventListener("click", () => { 
+  
     if (currentNumber !== "") {
         let percentageValue = Number(currentNumber)/100;
         currentNumber = percentageValue; 
@@ -183,7 +195,8 @@ remainderBtn.addEventListener("click", () => {
 });
 
 // Event listener for the equals button
-equalsBtn.addEventListener("click", () => {
+equalsBtn.addEventListener("click", () => { 
+   
     let result;
     if (currentNumber !== "" && intermediateResults !== null && operator !== null) {
         result = operate(operator, intermediateResults, Number(currentNumber));
@@ -209,7 +222,8 @@ equalsBtn.addEventListener("click", () => {
 
 
 // Event listener for negation button
-negationBtn.addEventListener("click", () => {
+negationBtn.addEventListener("click", () => { 
+
     if (currentNumber == "") {
         currentNumber = "-" + currentNumber;
         updateDisplay(currentNumber);
@@ -217,7 +231,8 @@ negationBtn.addEventListener("click", () => {
 })
 
 // Event listener for Clear button
-acBtn.addEventListener("click", () => {
+acBtn.addEventListener("click", () => { 
+  
     currentNumber = "";
     operator = null;
     intermediateResults = null;
