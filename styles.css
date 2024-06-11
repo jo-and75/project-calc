@@ -7,8 +7,7 @@ body{
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    border: solid green; 
-    background-color: black;
+    background-color: pink;
 }   
 
 
@@ -19,8 +18,9 @@ body{
     align-items: center;
     border: solid pink; 
     height: 600px; 
-    width: 400px; 
-    background-color: black;
+    width: 300px; 
+    background-color: black; 
+    border-radius: 30px;
 }
 
 .first-row{ 
@@ -28,7 +28,7 @@ body{
     flex-direction: row; 
     justify-content: space-evenly;  
     align-self: center;
-    border: solid red;
+  /*  border: solid red; */
     width: 278px; 
     height: 70px;
  }  
@@ -38,8 +38,7 @@ body{
     flex-direction: row;   
     align-self: center;
     justify-content: space-evenly; 
-
-    border: solid green; 
+   /* border: solid green; */
     width: 280px; 
     height: 70px;
 } 
@@ -49,7 +48,7 @@ body{
     flex-direction: row;  
     justify-content: space-evenly;  
     align-self: center;
-    border: solid blue;  
+  /*  border: solid blue;  */
     width: 280px; 
     height: 70px;
 }
@@ -59,7 +58,7 @@ body{
     flex-direction: row;  
     justify-content: space-evenly;  
     align-self: center;
-    border: solid yellow;  
+  /*  border: solid yellow;  */
     width: 280px; 
     height: 70px;
 } 
@@ -69,7 +68,7 @@ body{
     flex-direction: row;  
     justify-content: space-evenly;  
     align-self: center;
-    border: solid orange; 
+  /*  border: solid orange; */
     width: 280px; 
     height: 70px;
 } 
@@ -155,7 +154,7 @@ button{
     display: flex;  
     flex-direction: column;
     box-sizing: border-box;
-    height: 200px;
+    height: 230px;
     font-size: 65px;   
     text-align: right;
     color: #D4D4D2; 
@@ -163,13 +162,14 @@ button{
     font-weight: 300;
     padding-top: 120px;  /* Adjust padding to move text to the bottom */
     padding-right: 10px; /* Adjust padding to move text to the right */
-    line-height: 1; /* Ensures single line height */
+    line-height: 1; /* Ensures single line height */ 
+    border: black;
 }
 
 .calc-base{  
     display: flex; 
     border: solid black; 
     width: 290px;
-    height: 520px;
+    height: 550px;
 } 
 

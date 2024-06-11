@@ -7,7 +7,7 @@ const fourthRow = document.createElement("div");
 const fifthRow = document.createElement("div");
 
 calculatorBase.classList.add("calc-base");
-calculatorBase.setAttribute("style", "border: solid blue;");
+//calculatorBase.setAttribute("style", "border: solid blue;");
 firstRow.classList.add("first-row");
 secondRow.classList.add("second-row");
 thirdRow.classList.add("third-row");
