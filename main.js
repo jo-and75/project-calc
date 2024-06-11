@@ -62,11 +62,11 @@ inputField.setAttribute("readonly", "true"); // Prevents one from typing directl
 acBtn.textContent = "AC";
 remainderBtn.textContent = "%";
 negationBtn.textContent = "(-)";
-divideBtn.textContent = "/";
+divideBtn.textContent = "÷";
 num7.textContent = "7";
 num8.textContent = "8";
 num9.textContent = "9";
-multiplyBtn.textContent = "*";
+multiplyBtn.textContent = "x";
 num4.textContent = "4";
 num5.textContent = "5";
 num6.textContent = "6";
@@ -224,9 +224,9 @@ function operate(operator, a, b) {
             return add(a, b);
         case "-":
             return subtract(a, b);
-        case "/":
+        case "÷":
             return divide(a, b);
-        case "*":
+        case "x":
             return multiply(a, b);
         default:
             return "ERROR, INVALID OPERATOR";

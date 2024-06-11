@@ -89,7 +89,10 @@ button{
     justify-content: center; 
     align-items: center;
     height: 60px;
-    width: 65px; 
+    width: 65px;  
+    font-size: 25px; 
+    background-color:grey; 
+    color: aliceblue;
 }
 .input{  
     height: 100px;
