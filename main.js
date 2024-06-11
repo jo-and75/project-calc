@@ -57,8 +57,6 @@ acBtn.classList.add("greyBtns");
 remainderBtn.classList.add("greyBtns"); 
 negationBtn.classList.add("greyBtns");
 
-
-
 equalsBtn.classList.add("equalsbtn")
 num0.classList.add("btn");
 inputField.classList.add("input");
@@ -112,7 +110,6 @@ fifthRow.appendChild(num0);
 fifthRow.appendChild(pointBtn);
 fifthRow.appendChild(equalsBtn); 
 
-
 let currentNumber = "";
 let operator = null;
 let intermediateResults = null;
@@ -125,8 +122,6 @@ let calculationCompleted = false;
 let operatorClicked = false; 
 let activateOperatorTransition = false;
 
-
-
 // Function to reset styles for all buttons
 function resetButtonStyles() {
     document.querySelectorAll(".operators").forEach(button => {
@@ -134,7 +129,6 @@ function resetButtonStyles() {
         button.style.color = ""; // Reset text color
     });
 }
-
 
 // Event listener for numbers
 document.querySelectorAll(".normal-button").forEach(button => {
@@ -152,7 +146,6 @@ document.querySelectorAll(".normal-button").forEach(button => {
         updateDisplay(currentNumber);
     }) 
 })
-
 
 // Event listener for operators
 document.querySelectorAll(".operators").forEach((button) => { 
@@ -175,9 +168,6 @@ document.querySelectorAll(".operators").forEach((button) => {
         updateDisplay(intermediateResults); // This shows result after each operator is pressed. 
     });  
 });
-
-
-
 
 // Event listener for the percentage button
 remainderBtn.addEventListener("click", () => {  
@@ -215,8 +205,6 @@ equalsBtn.addEventListener("click", () => {
     }
     operatorClicked = false;
 });
-
-
 
 // Event listener for negation button
 negationBtn.addEventListener("click", () => { 
