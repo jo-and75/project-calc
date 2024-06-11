@@ -18,16 +18,16 @@ body{
     justify-content: center; 
     align-items: center;
     border: solid pink; 
-    height: 450px; 
-    width: 300px; 
+    height: 600px; 
+    width: 400px; 
     background-color: black;
 }
 
 .first-row{ 
     display: flex; 
     flex-direction: row; 
-    justify-content: center; 
-    gap: 3px;
+    justify-content: space-evenly;  
+    align-self: center;
     border: solid red;
     width: 270px; 
     height: 70px;
@@ -35,8 +35,10 @@ body{
 
 .second-row{ 
     display: flex; 
-    flex-direction: row;  
-    justify-content: space-between;
+    flex-direction: row;   
+    align-self: center;
+    justify-content: space-evenly; 
+    
     border: solid green; 
     width: 270px; 
     height: 70px;
@@ -45,7 +47,8 @@ body{
 .third-row{ 
     display: flex; 
     flex-direction: row;  
-    justify-content: center; 
+    justify-content: center;  
+    align-self: center;
     gap: 3px;
     border: solid blue;  
     width: 270px; 
@@ -55,7 +58,8 @@ body{
 .fourth-row{ 
     display: flex; 
     flex-direction: row;  
-    justify-content: center; 
+    justify-content: center;  
+    align-self: center;
     gap: 3px;
     border: solid yellow;  
     width: 270px; 
@@ -65,8 +69,8 @@ body{
 .fifth-row{ 
     display: flex; 
     flex-direction: row;  
-    justify-content: center; 
-    gap: 3px;
+    justify-content: space-evenly;  
+    align-self: center;
     border: solid orange; 
     width: 270px; 
     height: 70px;
@@ -83,23 +87,33 @@ body{
 
 .btn{ 
     display: flex; 
-    justify-content: center; 
-    height: 60px;  
-    width: 133px;
+    justify-content: center;  
+    align-items: center; 
+    padding-right: 65px;
+    height: 55px;  
+    width: 133px; 
+    border-radius: 28px; 
+    border: black; 
+    
 }
 
 button{  
     display: flex; 
     justify-content: center; 
     align-items: center;
-    height: 60px;
-    width: 60px;  
+    height: 55px;
+    width: 55px;  
     font-size: 25px; 
-    background-color: rgb(43, 42, 42);
+    background-color: rgb(43, 42, 42); 
+    border-radius: 50%;
     color: aliceblue; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    filter: brightness(100%);
-} 
+    filter: brightness(100%); 
+    border: black; 
+    font-weight: bold;
+}  
+
+
 
 .equalsbtn{  
     display: flex; 
@@ -118,17 +132,19 @@ button{
 .greyBtns{ 
     background-color: #afafaf; 
     color: black; 
-    font-weight: 549; 
+    font-weight: 550; 
     border-radius: 50%; 
-    border:  black;
+    border:  black; 
+    width: 55px; 
+    height: 55px;
 }
 
 .operators{
      display: flex; 
      justify-content: center; 
      align-items: center;
-    height: 60px;
-    width: 65px;  
+    height: 55px;
+    width: 55px;  
     font-size: 25px; 
     background-color:#db8c1c; 
     color: aliceblue; 
@@ -137,7 +153,7 @@ button{
 
 
 .input{  
-    height: 100px;
+    height: 200px;
     font-size: 40px; 
     text-align: right; 
     color: #D4D4D2; 
@@ -147,7 +163,7 @@ button{
 .calc-base{  
     display: flex; 
     border: solid black; 
-    width: 270px;
-    height: 420px;
+    width: 290px;
+    height: 520px;
 } 
 

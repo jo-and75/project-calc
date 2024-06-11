@@ -7,7 +7,7 @@ const fourthRow = document.createElement("div");
 const fifthRow = document.createElement("div");
 
 calculatorBase.classList.add("calc-base");
-calculatorBase.setAttribute("style", "border: solid black;");
+calculatorBase.setAttribute("style", "border: solid blue;");
 firstRow.classList.add("first-row");
 secondRow.classList.add("second-row");
 thirdRow.classList.add("third-row");
@@ -47,7 +47,7 @@ num8.classList.add("normal-button");
 num9.classList.add("normal-button");
 pointBtn.classList.add("normal-button");
  
-num0.id = "num0"
+num0.id = "num0";
 addBtn.classList.add("operators");
 minusBtn.classList.add("operators");
 multiplyBtn.classList.add("operators");
@@ -146,7 +146,7 @@ document.querySelectorAll(".operators").forEach((button) => {
             if (intermediateResults == null) {
                 intermediateResults = Number(currentNumber)
             } else {
-                intermediateResults = operate(operator, intermediateResults, Number(currentNumber));
+                intermediateResults = operate(operator, intermediateResults, Number(currentNumber)); 
             }
             currentNumber = "";
         }
@@ -173,8 +173,9 @@ equalsBtn.addEventListener("click", () => {
     let result;
     if (currentNumber !== "" && intermediateResults !== null && operator !== null) {
         result = operate(operator, intermediateResults, Number(currentNumber));
-        calculationCompleted = true;
-        updateDisplay(result);
+        calculationCompleted = true; 
+        let newResult = Math.round(result)
+        updateDisplay(newResult);
     } else if (currentNumber !== "" && intermediateResults == null && operator == null) {
         result = currentNumber;
         updateDisplay(result); // when number selected & equals pressed, returns number and not blank
