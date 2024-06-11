@@ -91,7 +91,11 @@ body{
     width: 125px; 
     border-radius: 28px; 
     border: black; 
-    
+    transition: 0.2s;    
+} 
+
+.btn:active{ 
+    background-color: white;
 }
 
 button{  
@@ -107,8 +111,13 @@ button{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     filter: brightness(100%); 
     border: black; 
-    font-weight: bold;
-}  
+    font-weight: bold;  
+    transition: 0.2s;
+}   
+
+button:active{ 
+    background-color: white;
+}
 
 
 
@@ -123,7 +132,11 @@ button{
    background-color:#FF9500; 
    color: aliceblue; 
    border: black;
+    transition: 0.2s;
+} 
 
+.equalsbtn:active{ 
+    background-color: white; 
 }
 
 .greyBtns{ 
@@ -133,9 +146,13 @@ button{
     border-radius: 50%; 
     border:  black; 
     width: 55px; 
-    height: 55px; 
+    height: 55px;  
+    transition: 0.2s;
 } 
 
+.greyBtns:active{ 
+    background-color: white;
+}
 
 .operators{
      display: flex; 

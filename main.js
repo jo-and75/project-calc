@@ -172,19 +172,16 @@ document.querySelectorAll(".operators").forEach((button) => {
         }
         operatorClicked = true;
         operator = button.textContent;
-     
         updateDisplay(intermediateResults); // This shows result after each operator is pressed. 
-       
     });  
- 
 });
 
 
 
 
 // Event listener for the percentage button
-remainderBtn.addEventListener("click", () => { 
-  
+remainderBtn.addEventListener("click", () => {  
+    resetButtonStyles();
     if (currentNumber !== "") {
         let percentageValue = Number(currentNumber)/100;
         currentNumber = percentageValue; 
@@ -196,7 +193,7 @@ remainderBtn.addEventListener("click", () => {
 
 // Event listener for the equals button
 equalsBtn.addEventListener("click", () => { 
-   
+   resetButtonStyles();
     let result;
     if (currentNumber !== "" && intermediateResults !== null && operator !== null) {
         result = operate(operator, intermediateResults, Number(currentNumber));
@@ -223,7 +220,7 @@ equalsBtn.addEventListener("click", () => {
 
 // Event listener for negation button
 negationBtn.addEventListener("click", () => { 
-
+    resetButtonStyles();
     if (currentNumber == "") {
         currentNumber = "-" + currentNumber;
         updateDisplay(currentNumber);
@@ -232,7 +229,7 @@ negationBtn.addEventListener("click", () => {
 
 // Event listener for Clear button
 acBtn.addEventListener("click", () => { 
-  
+    resetButtonStyles;
     currentNumber = "";
     operator = null;
     intermediateResults = null;
