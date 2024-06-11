@@ -110,7 +110,9 @@ fourthRow.appendChild(num3);
 fourthRow.appendChild(addBtn);
 fifthRow.appendChild(num0);
 fifthRow.appendChild(pointBtn);
-fifthRow.appendChild(equalsBtn);
+fifthRow.appendChild(equalsBtn); 
+
+const operators = document.querySelectorAll(".operators");
 
 let currentNumber = "";
 let operator = null;
@@ -140,8 +142,13 @@ document.querySelectorAll(".normal-button").forEach(button => {
 })
 
 // Event listener for operators
-document.querySelectorAll(".operators").forEach((button) => {
-    button.addEventListener("click", () => {
+document.querySelectorAll(".operators").forEach((button) => { 
+    button.addEventListener("click", () => { 
+
+            button.style.backgroundColor = "white"; // Set background color
+            button.style.color = "#db8c1c";
+             
+
         if (currentNumber !== "") {
             if (intermediateResults == null) {
                 intermediateResults = Number(currentNumber)
@@ -152,10 +159,17 @@ document.querySelectorAll(".operators").forEach((button) => {
         }
         operatorClicked = true;
         operator = button.textContent;
-        button.setAttribute("style", "transition : background-color;")
-        updateDisplay(intermediateResults); // This shows result after each operator is pressed.
-    }); 
+     
+        updateDisplay(intermediateResults); // This shows result after each operator is pressed. 
+       
+    });  
+    button.addEventListener("blur", () => {
+        button.classList.remove("active");
+    });
 });
+
+
+
 
 // Event listener for the percentage button
 remainderBtn.addEventListener("click", () => {

@@ -133,8 +133,9 @@ button{
     border-radius: 50%; 
     border:  black; 
     width: 55px; 
-    height: 55px;
-}
+    height: 55px; 
+} 
+
 
 .operators{
      display: flex; 
@@ -146,8 +147,9 @@ button{
     background-color:#db8c1c; 
     color: aliceblue; 
     font-weight: bold; 
-    text-align: center;
+    text-align: center;  
 } 
+
 
 
 .input {
