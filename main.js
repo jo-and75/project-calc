@@ -46,7 +46,8 @@ num7.classList.add("normal-button");
 num8.classList.add("normal-button");
 num9.classList.add("normal-button");
 pointBtn.classList.add("normal-button");
-
+ 
+num0.id = "num0"
 addBtn.classList.add("operators");
 minusBtn.classList.add("operators");
 multiplyBtn.classList.add("operators");
@@ -71,7 +72,7 @@ divideBtn.textContent = "÷";
 num7.textContent = "7";
 num8.textContent = "8";
 num9.textContent = "9";
-multiplyBtn.textContent = "x";
+multiplyBtn.textContent = "×";
 num4.textContent = "4";
 num5.textContent = "5";
 num6.textContent = "6";
@@ -231,7 +232,7 @@ function operate(operator, a, b) {
             return subtract(a, b);
         case "÷":
             return divide(a, b);
-        case "x":
+        case "×":
             return multiply(a, b);
         default:
             return "ERROR, INVALID OPERATOR";

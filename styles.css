@@ -7,8 +7,11 @@ body{
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    border: solid green;
-}  
+    border: solid green; 
+    background-color: black;
+}   
+
+
 
 #container{  
     display: flex; 
@@ -16,7 +19,8 @@ body{
     align-items: center;
     border: solid pink; 
     height: 450px; 
-    width: 300px;
+    width: 300px; 
+    background-color: black;
 }
 
 .first-row{ 
@@ -80,7 +84,7 @@ body{
 .btn{ 
     display: flex; 
     justify-content: center; 
-    height: 60px; 
+    height: 60px;  
     width: 133px;
 }
 
@@ -89,11 +93,12 @@ button{
     justify-content: center; 
     align-items: center;
     height: 60px;
-    width: 65px;  
+    width: 60px;  
     font-size: 25px; 
-    background-color:#505050; 
+    background-color: rgb(43, 42, 42);
     color: aliceblue; 
-    font-family: 'Menlo';
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    filter: brightness(100%);
 } 
 
 .equalsbtn{  
@@ -101,16 +106,21 @@ button{
     justify-content: center; 
     align-items: center;
    height: 60px;
-   width: 65px;  
-   font-size: 25px; 
+   width: 60px;  
+   font-size: 25px;  
+   border-radius: 50%; 
    background-color:#FF9500; 
-   color: aliceblue;
+   color: aliceblue; 
+   border: black;
 
 }
 
 .greyBtns{ 
-    background-color: #D4D4D2; 
-    color: black;
+    background-color: #afafaf; 
+    color: black; 
+    font-weight: 549; 
+    border-radius: 50%; 
+    border:  black;
 }
 
 .operators{
@@ -120,15 +130,18 @@ button{
     height: 60px;
     width: 65px;  
     font-size: 25px; 
-    background-color:#FF9500; 
-    color: aliceblue;
+    background-color:#db8c1c; 
+    color: aliceblue; 
+    font-weight: bold;
 } 
 
 
 .input{  
     height: 100px;
     font-size: 40px; 
-    text-align: right;
+    text-align: right; 
+    color: #D4D4D2; 
+    background-color: black;
 }
 
 .calc-base{  
