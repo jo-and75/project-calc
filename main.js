@@ -50,7 +50,12 @@ pointBtn.classList.add("normal-button");
 addBtn.classList.add("operators");
 minusBtn.classList.add("operators");
 multiplyBtn.classList.add("operators");
-divideBtn.classList.add("operators");
+divideBtn.classList.add("operators"); 
+
+acBtn.classList.add("greyBtns"); 
+remainderBtn.classList.add("greyBtns"); 
+negationBtn.classList.add("greyBtns");
+
 
 
 equalsBtn.classList.add("equalsbtn")

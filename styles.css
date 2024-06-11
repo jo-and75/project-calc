@@ -91,9 +91,40 @@ button{
     height: 60px;
     width: 65px;  
     font-size: 25px; 
-    background-color:grey; 
-    color: aliceblue;
+    background-color:#505050; 
+    color: aliceblue; 
+    font-family: 'Menlo';
+} 
+
+.equalsbtn{  
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+   height: 60px;
+   width: 65px;  
+   font-size: 25px; 
+   background-color:#FF9500; 
+   color: aliceblue;
+
 }
+
+.greyBtns{ 
+    background-color: #D4D4D2; 
+    color: black;
+}
+
+.operators{
+     display: flex; 
+     justify-content: center; 
+     align-items: center;
+    height: 60px;
+    width: 65px;  
+    font-size: 25px; 
+    background-color:#FF9500; 
+    color: aliceblue;
+} 
+
+
 .input{  
     height: 100px;
     font-size: 40px; 
