@@ -173,18 +173,24 @@ equalsBtn.addEventListener("click", () => {
     let result;
     if (currentNumber !== "" && intermediateResults !== null && operator !== null) {
         result = operate(operator, intermediateResults, Number(currentNumber));
-        calculationCompleted = true; 
-        let newResult = Math.round(result)
-        updateDisplay(newResult);
+            calculationCompleted = true;  
+            // Check if the result has more than 4 decimal places
+            let decimalIndex = result.toString().indexOf(".");
+            if (decimalIndex !== -1 && result.toString().length - decimalIndex - 1 > 4) {
+                // If it does, round it to 2 decimal places 
+                let newResult = Number(Math.round(result * 100) / 100);
+                result = newResult;
+            } 
+        updateDisplay(result);
     } else if (currentNumber !== "" && intermediateResults == null && operator == null) {
-        result = currentNumber;
+        result = currentNumber; 
         updateDisplay(result); // when number selected & equals pressed, returns number and not blank
     } else {
         result = "ERROR";
         updateDisplay(result);
     }
     operatorClicked = false;
-}) 
+});
 
 
 
