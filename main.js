@@ -179,26 +179,6 @@ equalsBtn.addEventListener("click", () => {
     operatorClicked = false;
 }) 
 
-// Add event listener for keydown to handle keyboard input
-document.addEventListener("keydown", (event) => {
-    const key = event.key;
-
-    // Check if the key is a number or a decimal point
-    if (!isNaN(key) || key === ".") {
-        if (calculationCompleted && !operatorClicked) {
-            intermediateResults = null;
-            operator = null;
-            currentNumber = "";
-            calculationCompleted = false;
-            operatorClicked = false;
-        }
-        currentNumber += key;
-        updateDisplay(currentNumber);
-    } else if (key === "Enter") {
-        // Handle the equals key (Enter)
-        equalsBtn.click();
-    }
-})
 
 
 // Event listener for negation button
